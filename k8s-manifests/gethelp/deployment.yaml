@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: gethelp
-          image: nginx:latest
+          image: nginx:this-tag-doesnot-exist
           ports:
             - containerPort: 80
 
