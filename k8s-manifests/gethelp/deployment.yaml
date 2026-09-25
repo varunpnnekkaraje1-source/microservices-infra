@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gethelp
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gethelp
+  template:
+    metadata:
+      labels:
+        app: gethelp
+    spec:
+      containers:
+        - name: gethelp
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+
